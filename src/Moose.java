@@ -51,7 +51,7 @@ public class Moose extends Player {
     }
 
     private int decide() {
-        return 1;
+        return new Random().nextInt(3) + 1;
     }
 
     public double getScore() {
