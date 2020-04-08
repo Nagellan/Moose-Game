@@ -1,3 +1,5 @@
+import com.company.Moose;
+
 public class Tournament {
     private int xA;
     private int xB;

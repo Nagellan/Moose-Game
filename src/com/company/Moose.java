@@ -1,7 +1,9 @@
+package com.company;
+
 import java.util.LinkedList;
 import java.util.Random;
 
-public class Moose extends Player {
+public class Moose implements Player {
     private LinkedList<Integer> moves;
     private LinkedList<Integer> opponentMoves;
 
