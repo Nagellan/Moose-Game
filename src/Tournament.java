@@ -40,8 +40,8 @@ public class Tournament {
             int moose2Move = this.moose2.move(moose1LastMove, this.xA, this.xB, this.xC);
 
             // update moose scores
-            this.moose1Score = moose1Move == moose2Move ? 0 : this.getScore(fields[moose1Move - 1]);
-            this.moose2Score = moose1Move == moose2Move ? 0 : this.getScore(fields[moose2Move - 1]);
+            this.moose1Score += moose1Move == moose2Move ? 0 : this.getScore(fields[moose1Move - 1]);
+            this.moose2Score += moose1Move == moose2Move ? 0 : this.getScore(fields[moose2Move - 1]);
 
             // calculate changes in fields' stats
             fieldsChange[moose1Move - 1] = -1;
