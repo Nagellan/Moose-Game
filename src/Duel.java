@@ -1,18 +1,18 @@
 import com.company.Moose;
 
-public class Tournament {
+public class Duel {
     private int xA;
     private int xB;
     private int xC;
 
     private int numRounds;
 
-    private Moose moose1;
-    private Moose moose2;
+    final private Moose moose1;
+    final private Moose moose2;
     private double moose1Score;
     private double moose2Score;
 
-    public Tournament(Moose moose1, Moose moose2) {
+    public Duel(Moose moose1, Moose moose2) {
         this.xA = 1;
         this.xB = 1;
         this.xC = 1;
