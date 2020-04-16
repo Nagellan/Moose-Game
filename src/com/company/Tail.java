@@ -2,6 +2,9 @@ package com.company;
 
 import java.util.Random;
 
+/**
+ * Always chooses the last opponent's field.
+ */
 public class Tail extends Moose {
     public Tail() {
         super();

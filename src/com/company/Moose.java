@@ -3,6 +3,9 @@ package com.company;
 import java.util.LinkedList;
 import java.util.Random;
 
+/**
+ * Just plain Moose. Cannot decide by himself. Cannot even exist.
+ */
 public abstract class Moose implements Player {
     protected LinkedList<Integer> moves;
     protected LinkedList<Integer> opponentMoves;

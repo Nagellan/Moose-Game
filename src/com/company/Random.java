@@ -1,5 +1,8 @@
 package com.company;
 
+/**
+ * Always chooses the field randomly.
+ */
 public class Random extends Moose {
     public Random() {
         super();
