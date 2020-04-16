@@ -11,11 +11,20 @@ public class Tail extends Moose {
         this.name = "Tail";
     }
 
+    public Tail(Tail target) {
+        super(target);
+    }
+
     @Override
     protected int decide(int xA, int xB, int xC) {
         return this.opponentMoves.peek() != null
                 ? this.opponentMoves.peek()
                 : new Random().nextInt(3) + 1;
+    }
+
+    @Override
+    public Moose clone() {
+        return new Tail(this);
     }
 }
 

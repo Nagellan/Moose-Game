@@ -12,6 +12,10 @@ public class Unfussy extends Greedy {
         this.name = "Unfussy";
     }
 
+    public Unfussy(Unfussy target) {
+        super(target);
+    }
+
     @Override
     protected int decide(int xA, int xB, int xC) {
         int[] fields = {xA, xB, xC};
@@ -30,5 +34,10 @@ public class Unfussy extends Greedy {
         }
 
         return indexMax + 1;
+    }
+
+    @Override
+    public Moose clone() {
+        return new Unfussy(this);
     }
 }

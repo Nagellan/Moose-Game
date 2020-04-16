@@ -12,6 +12,10 @@ public class Greedy extends Moose {
         this.name = "Greedy";
     }
 
+    public Greedy(Greedy target) {
+        super(target);
+    }
+
     @Override
     protected int decide(int xA, int xB, int xC) {
         int[] fields = {xA, xB, xC};
@@ -37,5 +41,10 @@ public class Greedy extends Moose {
         }
 
         return indexMax + 1;
+    }
+
+    @Override
+    public Moose clone() {
+        return new Greedy(this);
     }
 }

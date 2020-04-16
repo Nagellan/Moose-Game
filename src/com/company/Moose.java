@@ -16,6 +16,14 @@ public abstract class Moose implements Player {
         this.reset();
     }
 
+    public Moose(Moose target) {
+        if (target != null) {
+            this.moves = target.moves;
+            this.opponentMoves = target.opponentMoves;
+            this.name = target.name;
+        }
+    }
+
     @Override
     public void reset() {
         this.moves = new LinkedList<>();
@@ -48,4 +56,6 @@ public abstract class Moose implements Player {
     }
 
     protected abstract int decide(int xA, int xB, int xC);
+
+    public abstract Moose clone();
 }

@@ -64,7 +64,7 @@ public class Duel {
         this.moose2.reset();
     }
 
-    public void getResults() {
+    public void printResults() {
         System.out.println("Amount of rounds: " + this.numRounds);
         System.out.println("Fields stats: xA=" + this.xA + ", xB=" + this.xB + ", xC=" + xC);
         System.out.println(this.moose1.getName() + "'s score: " + this.moose1Score);
