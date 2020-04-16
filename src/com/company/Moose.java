@@ -6,8 +6,10 @@ import java.util.Random;
 public class Moose implements Player {
     private LinkedList<Integer> moves;
     private LinkedList<Integer> opponentMoves;
+    public String name;
 
     public Moose() {
+        this.name = "Moose";
         this.reset();
     }
 
@@ -36,6 +38,10 @@ public class Moose implements Player {
     @Override
     public String getEmail() {
         return "i.nazmiev@innopolis.ru";
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     protected int decide(int xA, int xB, int xC) {

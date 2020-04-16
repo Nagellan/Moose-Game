@@ -7,7 +7,7 @@ public class Main {
         Moose moose1 = new Random();
         Moose moose2 = new Greedy();
         Duel duel = new Duel(moose1, moose2);
-        duel.play(20);
+        duel.play(100);
         duel.getResults();
     }
 }

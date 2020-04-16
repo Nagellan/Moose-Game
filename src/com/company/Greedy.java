@@ -1,6 +1,11 @@
 package com.company;
 
 public class Greedy extends Moose {
+    public Greedy() {
+        super();
+        this.name = "Greedy";
+    }
+
     @Override
     protected int decide(int xA, int xB, int xC) {
         int[] fields = {xA, xB, xC};
