@@ -48,7 +48,7 @@ public class Duel {
             fieldsChange[moose1Move - 1] = -1;
             fieldsChange[moose2Move - 1] = -1;
 
-            System.out.println(xA + " " + xB + " " + xC + " - " + moose1Move);
+            // System.out.println(xA + " " + xB + " " + xC + " - " + moose1Move);
 
             // update fields stats
             this.xA = Math.max(0, this.xA + fieldsChange[0]);
