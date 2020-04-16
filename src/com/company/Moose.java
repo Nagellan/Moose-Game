@@ -3,9 +3,9 @@ package com.company;
 import java.util.LinkedList;
 import java.util.Random;
 
-public class Moose implements Player {
-    private LinkedList<Integer> moves;
-    private LinkedList<Integer> opponentMoves;
+public abstract class Moose implements Player {
+    protected LinkedList<Integer> moves;
+    protected LinkedList<Integer> opponentMoves;
     public String name;
 
     public Moose() {
@@ -44,7 +44,5 @@ public class Moose implements Player {
         return this.name;
     }
 
-    protected int decide(int xA, int xB, int xC) {
-        return 0;
-    }
+    protected abstract int decide(int xA, int xB, int xC);
 }
