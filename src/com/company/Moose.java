@@ -31,6 +31,11 @@ public class Moose implements Player {
         return move;
     }
 
+    @Override
+    public String getEmail() {
+        return "i.nazmiev@innopolis.ru";
+    }
+
     private int decide() {
         return new Random().nextInt(3) + 1;
     }
