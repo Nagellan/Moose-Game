@@ -29,13 +29,12 @@ public class Duel {
     public void play(int numRounds) {
         this.numRounds = numRounds;
 
-        int[] fieldsChange = {1, 1, 1};
-
         int moose1LastMove = 0;
         int moose2LastMove = 0;
 
         for (int r = 0; r < numRounds; r++) {
             int[] fields = {this.xA, this.xB, this.xC};
+            int[] fieldsChange = {1, 1, 1};
 
             // make moves
             int moose1Move = this.moose1.move(moose2LastMove, this.xA, this.xB, this.xC);
