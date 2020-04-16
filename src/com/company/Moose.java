@@ -25,7 +25,7 @@ public class Moose implements Player {
         this.opponentMoves.push(opponentLastMove);
 
         // make move (first one is random)
-        move = opponentLastMove == 0 ? new Random().nextInt(3) + 1 : this.decide();
+        move = opponentLastMove == 0 ? new Random().nextInt(3) + 1 : this.decide(xA, xB, xC);
 
         // save current move
         this.moves.push(move);
@@ -38,7 +38,7 @@ public class Moose implements Player {
         return "i.nazmiev@innopolis.ru";
     }
 
-    private int decide() {
-        return new Random().nextInt(3) + 1;
+    protected int decide(int xA, int xB, int xC) {
+        return 0;
     }
 }
