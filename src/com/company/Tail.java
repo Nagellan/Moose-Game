@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Random;
+
 public class Tail extends Moose {
     public Tail() {
         super();
@@ -10,7 +12,7 @@ public class Tail extends Moose {
     protected int decide(int xA, int xB, int xC) {
         return this.opponentMoves.peek() != null
                 ? this.opponentMoves.peek()
-                : new java.util.Random().nextInt(3) + 1;
+                : new Random().nextInt(3) + 1;
     }
 }
 
