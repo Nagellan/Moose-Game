@@ -29,7 +29,7 @@ public class Tournament {
 
         for (Moose agent : this.agents) {
             for (int i = 0; i < groupSize; i++) {
-                players.push(agent.clone());
+                players.push(agent.clone(i));
             }
         }
 

@@ -16,11 +16,11 @@ public abstract class Moose implements Player {
         this.reset();
     }
 
-    public Moose(Moose target) {
+    public Moose(Moose target, int postfix) {
         if (target != null) {
             this.moves = target.moves;
             this.opponentMoves = target.opponentMoves;
-            this.name = target.name;
+            this.name = target.name + "-" + postfix;
         }
     }
 
@@ -57,5 +57,5 @@ public abstract class Moose implements Player {
 
     protected abstract int decide(int xA, int xB, int xC);
 
-    public abstract Moose clone();
+    public abstract Moose clone(int postfix);
 }

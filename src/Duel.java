@@ -26,7 +26,7 @@ public class Duel {
         this.moose2Score = 0;
     }
 
-    public void play(int numRounds) {
+    public Moose play(int numRounds) {
         this.numRounds = numRounds;
 
         int moose1LastMove = 0;
@@ -48,8 +48,6 @@ public class Duel {
             fieldsChange[moose1Move - 1] = -1;
             fieldsChange[moose2Move - 1] = -1;
 
-            // System.out.println(xA + " " + xB + " " + xC + " - " + moose1Move);
-
             // update fields stats
             this.xA = Math.max(0, this.xA + fieldsChange[0]);
             this.xB = Math.max(0, this.xB + fieldsChange[1]);
@@ -62,6 +60,8 @@ public class Duel {
         // reset both moose memory
         this.moose1.reset();
         this.moose2.reset();
+
+        return this.moose1Score >= this.moose2Score ? this.moose1 : this.moose2;
     }
 
     public void printResults() {

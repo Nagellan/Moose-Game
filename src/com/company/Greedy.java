@@ -12,8 +12,8 @@ public class Greedy extends Moose {
         this.name = "Greedy";
     }
 
-    public Greedy(Greedy target) {
-        super(target);
+    public Greedy(Greedy target, int postfix) {
+        super(target, postfix);
     }
 
     @Override
@@ -44,7 +44,7 @@ public class Greedy extends Moose {
     }
 
     @Override
-    public Moose clone() {
-        return new Greedy(this);
+    public Moose clone(int postfix) {
+        return new Greedy(this, postfix);
     }
 }

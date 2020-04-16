@@ -9,8 +9,8 @@ public class Random extends Moose {
         this.name = "Random";
     }
 
-    public Random(Random target) {
-        super(target);
+    public Random(Random target, int postfix) {
+        super(target, postfix);
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Random extends Moose {
     }
 
     @Override
-    public Moose clone() {
-        return new Random(this);
+    public Moose clone(int postfix) {
+        return new Random(this, postfix);
     }
 }

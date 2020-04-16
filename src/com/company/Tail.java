@@ -11,8 +11,8 @@ public class Tail extends Moose {
         this.name = "Tail";
     }
 
-    public Tail(Tail target) {
-        super(target);
+    public Tail(Tail target, int postfix) {
+        super(target, postfix);
     }
 
     @Override
@@ -23,8 +23,8 @@ public class Tail extends Moose {
     }
 
     @Override
-    public Moose clone() {
-        return new Tail(this);
+    public Moose clone(int postfix) {
+        return new Tail(this, postfix);
     }
 }
 

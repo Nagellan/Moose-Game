@@ -12,8 +12,8 @@ public class Unfussy extends Greedy {
         this.name = "Unfussy";
     }
 
-    public Unfussy(Unfussy target) {
-        super(target);
+    public Unfussy(Unfussy target, int postfix) {
+        super(target, postfix);
     }
 
     @Override
@@ -37,7 +37,7 @@ public class Unfussy extends Greedy {
     }
 
     @Override
-    public Moose clone() {
-        return new Unfussy(this);
+    public Moose clone(int postfix) {
+        return new Unfussy(this, postfix);
     }
 }
